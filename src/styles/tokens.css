@@ -1,0 +1,97 @@
+:root{
+  color-scheme: light;
+
+  /* superficies e texto */
+  --fundo: #FFFFFF;
+  --fundo-2: #F4F8FA;
+  --fundo-3: #E7F0F4;
+  --texto: #0D1117;
+  --texto-2: #3D4B55;
+  --texto-3: #5F6C77;
+
+  /* marca */
+  --titulo: #007C9E;
+  --superficie-marca: #004054;
+  --sobre-marca: #FFFFFF;
+  --sobre-marca-2: #A8CBD6;
+  --acao-fundo: #004054;
+  --acao-texto: #FFFFFF;
+  --acao-fundo-hover: #00303F;
+
+  --secundaria: #25CCE3;
+  --terciaria-verde: #6BE586;
+  --terciaria-lima: #D9E345;
+
+  /* linhas e foco */
+  --borda: #D7E3E9;
+  --borda-forte: #B2C6D0;
+  --foco: #007C9E;
+
+  /* semaforo de atencao */
+  --atencao-maior: #C0392B;
+  --atencao-maior-fundo: #FBEAE7;
+  --atencao-media: #D2691E;
+  --atencao-media-fundo: #FBF0E6;
+  --atencao-menor: #7A5C3E;
+  --atencao-menor-fundo: #F4EFE9;
+
+  /* estados */
+  --positivo: #0F6E52;
+  --positivo-fundo: #E6F4EF;
+  --alerta: #9A6A00;
+  --alerta-fundo: #FBF3E0;
+  --erro: #B02A1E;
+  --erro-fundo: #FBEAE7;
+
+  --sombra: 0 1px 2px rgba(0, 64, 84, .06), 0 8px 22px -16px rgba(0, 64, 84, .3);
+  --sombra-alta: 0 2px 8px rgba(0, 64, 84, .1), 0 24px 52px -26px rgba(0, 64, 84, .45);
+
+  --raio: 10px;
+  --raio-pequeno: 6px;
+  --raio-pilula: 999px;
+
+  --fonte: 'Sora', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fonte-dados: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --largura: 1120px;
+}
+
+[data-tema='escuro']{
+  color-scheme: dark;
+
+  --fundo: #0D1117;
+  --fundo-2: #151D25;
+  --fundo-3: #1E2A33;
+  --texto: #F2F6F8;
+  --texto-2: #C3CFD7;
+  --texto-3: #97A6B0;
+
+  --titulo: #25CCE3;
+  --superficie-marca: #06222C;
+  --sobre-marca: #FFFFFF;
+  --sobre-marca-2: #8FBECB;
+  --acao-fundo: #25CCE3;
+  --acao-texto: #06222C;
+  --acao-fundo-hover: #55DAEB;
+
+  --borda: #263341;
+  --borda-forte: #3A4C5A;
+  --foco: #25CCE3;
+
+  --atencao-maior: #F0776A;
+  --atencao-maior-fundo: #331A17;
+  --atencao-media: #F0A45C;
+  --atencao-media-fundo: #33240F;
+  --atencao-menor: #C3A88C;
+  --atencao-menor-fundo: #2A2319;
+
+  --positivo: #6BE586;
+  --positivo-fundo: #10291E;
+  --alerta: #D9E345;
+  --alerta-fundo: #2B2A11;
+  --erro: #F0776A;
+  --erro-fundo: #331A17;
+
+  --sombra: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 26px -18px rgba(0, 0, 0, .9);
+  --sombra-alta: 0 2px 8px rgba(0, 0, 0, .6), 0 24px 54px -28px rgba(0, 0, 0, .95);
+}

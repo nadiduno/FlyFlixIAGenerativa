@@ -1,0 +1,209 @@
+/* Primitivos compartilhados por mais de uma pagina.
+   Estilo especifico de componente vive no .module.css dele. */
+
+.envoltorio{ width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 20px; }
+
+.rotulo{
+  font-family: var(--fonte-dados);
+  font-size: .625rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+  font-weight: 500;
+}
+
+.dados { font-family: var(--fonte-dados); font-variant-numeric: tabular-nums; }
+.discreto { color: var(--texto-3); }
+.miudo { font-size: .85rem; line-height: 1.5; }
+
+/* ---------- painel de conteudo ---------- */
+.cartao{
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.cartao > header{
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--borda);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--fundo-2);
+}
+.cartao > header h3{ margin-top: 2px; }
+.cartao .corpo{ padding: 20px; }
+.cartao .corpo.semPadding{ padding: 0; }
+
+/* ---------- botoes ---------- */
+.botao{
+  font-family: var(--fonte);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  padding: 10px 18px;
+  border-radius: var(--raio-pilula);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color .14s ease, border-color .14s ease, color .14s ease, transform .1s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.2;
+}
+.botao:active{ transform: translateY(1px); }
+.botao[disabled]{ opacity: .5; cursor: not-allowed; }
+
+.botaoPrimario{ background: var(--acao-fundo); color: var(--acao-texto); border-color: var(--acao-fundo); }
+.botaoPrimario:hover{ background: var(--acao-fundo-hover); border-color: var(--acao-fundo-hover); }
+
+.botaoSecundario{ background: transparent; color: var(--titulo); border-color: var(--borda-forte); }
+.botaoSecundario:hover{ border-color: var(--titulo); background: var(--fundo-2); }
+
+.botaoSobreMarca{ background: rgba(255,255,255,.1); color: var(--sobre-marca); border-color: rgba(255,255,255,.35); }
+.botaoSobreMarca:hover{ background: rgba(255,255,255,.2); border-color: var(--sobre-marca); }
+
+/* ---------- campos ---------- */
+.campo, .area, .selecao{
+  width: 100%;
+  font-family: var(--fonte);
+  font-size: .95rem;
+  color: var(--texto);
+  background: var(--fundo-2);
+  border: 1px solid var(--borda-forte);
+  border-radius: var(--raio-pequeno);
+  padding: 10px 12px;
+}
+.area{ font-family: var(--fonte-dados); font-size: .82rem; line-height: 1.65; resize: vertical; }
+.selecao{ cursor: pointer; }
+.rotuloCampo{
+  display: block;
+  font-family: var(--fonte-dados);
+  font-size: .625rem;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+  margin: 0 0 7px;
+  font-weight: 500;
+}
+
+.linhaBotoes{ display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
+.linhaCampos{ display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; }
+.linhaCampos > div{ flex: 1 1 170px; min-width: 0; }
+
+/* ---------- etiquetas ---------- */
+.etiqueta{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fonte-dados);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  padding: 4px 10px;
+  border-radius: var(--raio-pilula);
+  border: 1px solid var(--borda-forte);
+  background: var(--fundo-2);
+  color: var(--texto-2);
+  white-space: nowrap;
+}
+.etiquetaTracejada{ border-style: dashed; background: transparent; color: var(--texto-3); }
+.etiquetaPositiva{ border-color: var(--positivo); background: var(--positivo-fundo); color: var(--positivo); }
+.etiquetaAlerta{ border-color: var(--alerta); background: var(--alerta-fundo); color: var(--alerta); }
+.etiquetaErro{ border-color: var(--erro); background: var(--erro-fundo); color: var(--erro); }
+
+/* ---------- tabelas ---------- */
+.rolagemTabela{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tabelaDados{ width: 100%; border-collapse: collapse; font-family: var(--fonte-dados); font-size: .8rem; }
+.tabelaDados caption{ text-align: left; padding: 0 0 12px; color: var(--texto-3); font-size: .82rem; font-family: var(--fonte); }
+.tabelaDados th{
+  text-align: left;
+  font-size: .625rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+  font-weight: 600;
+  padding: 0 14px 10px 0;
+  border-bottom: 1px solid var(--borda-forte);
+}
+.tabelaDados td{ padding: 10px 14px 10px 0; border-bottom: 1px solid var(--borda); vertical-align: top; color: var(--texto-2); }
+.tabelaDados tr:last-child td{ border-bottom: 0; }
+.valorDito{ color: var(--positivo); }
+.valorAusente{ color: var(--alerta); }
+
+/* ---------- listas de itens com etiqueta ---------- */
+.listaItens{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.listaItens li{ display: flex; gap: 12px; align-items: flex-start; font-size: .95rem; line-height: 1.5; }
+.marcador{
+  flex: none;
+  margin-top: 3px;
+  min-width: 118px;
+  text-align: center;
+  font-family: var(--fonte-dados);
+  font-size: .6rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: var(--raio-pilula);
+  border: 1px solid;
+}
+
+/* ---------- blocos de codigo e rascunho ---------- */
+.codigo{
+  background: var(--superficie-marca);
+  color: #DCEAF0;
+  padding: 16px 18px;
+  border-radius: var(--raio-pequeno);
+  overflow-x: auto;
+  font-family: var(--fonte-dados);
+  font-size: .76rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.codigo .comentario{ color: #7FB6C6; }
+
+.rascunho{
+  background: var(--fundo-2);
+  border: 1px solid var(--borda-forte);
+  border-left: 4px solid var(--titulo);
+  border-radius: var(--raio-pequeno);
+  padding: 16px 18px;
+  font-size: .98rem;
+  line-height: 1.68;
+  white-space: pre-wrap;
+  color: var(--texto);
+}
+
+.selo{
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--fundo-2);
+  border: 1px dashed var(--borda-forte);
+  border-radius: var(--raio-pequeno);
+  font-family: var(--fonte-dados);
+  font-size: .7rem;
+  line-height: 1.8;
+  color: var(--texto-3);
+}
+.selo strong{ color: var(--texto-2); font-weight: 600; }
+
+/* ---------- veredito ---------- */
+.veredito{
+  margin-top: 14px;
+  padding: 12px 15px;
+  border-radius: var(--raio-pequeno);
+  border: 1px solid;
+  font-family: var(--fonte-dados);
+  font-size: .76rem;
+  line-height: 1.6;
+}
+.veredictoOk{ border-color: var(--positivo); background: var(--positivo-fundo); color: var(--positivo); }
+.veredictoErro{ border-color: var(--erro); background: var(--erro-fundo); color: var(--erro); }
+
+@media (max-width: 640px){
+  .marcador{ min-width: 0; }
+  .cartao .corpo{ padding: 16px; }
+}

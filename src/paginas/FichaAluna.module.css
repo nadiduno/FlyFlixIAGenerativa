@@ -1,0 +1,59 @@
+.resumo{
+  font-family: var(--fonte-dados);
+  font-size: .76rem;
+  color: var(--texto-3);
+  margin: 0 0 16px;
+}
+.grade{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--borda);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-pequeno);
+  overflow: hidden;
+}
+.grade > div{ background: var(--fundo); padding: 13px 15px; }
+.grade dt{
+  font-family: var(--fonte-dados);
+  font-size: .6rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+  margin-bottom: 4px;
+}
+.grade dd{ margin: 0; font-size: .95rem; font-weight: 500; color: var(--texto); }
+.semResposta{ color: var(--alerta); font-weight: 400; font-style: italic; }
+
+.oculto{
+  background: var(--fundo-2);
+  border: 1px dashed var(--borda-forte);
+  border-radius: var(--raio-pequeno);
+  padding: 14px 16px;
+  margin-top: 14px;
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--texto-2);
+}
+.oculto strong{ color: var(--titulo); }
+
+.titulo{ margin: 26px 0 12px; }
+.aviso{ font-size: .85rem; color: var(--texto-3); margin: -6px 0 14px; }
+
+.faixa{
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid;
+  border-radius: var(--raio-pilula);
+  padding: 4px 12px 4px 9px;
+  font-size: .74rem;
+  font-weight: 600;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.luz{ width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+@media (max-width: 640px){
+  .grade{ grid-template-columns: repeat(2, 1fr); }
+}
