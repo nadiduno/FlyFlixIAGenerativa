@@ -67,7 +67,7 @@ export default function Cabecalho({ paginaAtual, aoTrocarPagina, tema, aoAlterna
 
       <div className={s.aviso} role="note">
         <p>
-          <strong>Protótipo acadêmico.</strong> Ferramenta de TCC do Grupo Ada Lovelace, Turma Fly da diversiData. Não serve para decisão sobre pessoas reais. As fichas carregadas agora são fictícias. A ordem vira real quando o arquivo da Estação 15 é carregado na página Base e Conexão.
+          <strong>Protótipo acadêmico.</strong> Ferramenta de TCC do Grupo Ada Lovelace, Turma Fly em parceria com a Alura, o Itaú e a DiversiData. Não serve para decisão sobre pessoas reais. As fichas carregadas agora são fictícias. A ordem vira real quando o arquivo da Estação 15 é carregado na página Base e Conexão.
         </p>
       </div>
     </header>
